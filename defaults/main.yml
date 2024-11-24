@@ -1,0 +1,10 @@
+---
+chrony_exporter_github_org: SuperQ
+chrony_exporter_port: 9123
+chrony_exporter_listen_addresses:
+  - "localhost:{{ chrony_exporter_port }}"
+chrony_exporter_enabled_collectors: []
+chrony_exporter_disabled_collectors: []
+chrony_exporter_flags: "{{ lookup('template', 'flags') }}"
+chrony_exporter_extra_flags: {}
+chrony_exporter_log_level: warn

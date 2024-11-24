@@ -1,0 +1,18 @@
+#jinja2: trim_blocks: "false", lstrip_blocks: "true"
+{% for collector in chrony_exporter_enabled_collectors %}
+--collector.{{ collector }}
+{% endfor %}
+{% for collector in chrony_exporter_disabled_collectors %}
+--no-collector.{{ collector }}
+{% endfor %}
+{% for k, v in chrony_exporter_extra_flags | dictsort %}
+  {% if v == "" %}
+--{{ k }}
+  {% else %}
+--{{ k }}="{{ v }}"
+  {% endif %}
+{% endfor %}
+--log.level="{{ chrony_exporter_log_level }}"
+{% for chrony_exporter_listen_address in chrony_exporter_listen_addresses %}
+--web.listen-address="{{ chrony_exporter_listen_address }}"
+{% endfor %}

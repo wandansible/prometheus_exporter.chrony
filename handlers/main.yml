@@ -1,0 +1,5 @@
+---
+- name: restart chrony_exporter
+  ansible.builtin.service:
+    name: chrony_exporter
+    state: restarted
