@@ -110,7 +110,7 @@ argument_specs:
       chrony_exporter_github_org:
         description: Name of organisation for exporter github repository
         type: str
-        default: prometheus
+        default: SuperQ
 
       chrony_exporter_github_repo:
         description: Name of exporter github repository
