@@ -86,7 +86,7 @@ Options (= indicates it is required):
           type: str
 
 - chrony_exporter_github_org  Name of organisation for exporter github repository
-          default: prometheus
+          default: SuperQ
           type: str
 
 - chrony_exporter_github_repo  Name of exporter github repository
