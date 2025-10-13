@@ -105,6 +105,11 @@ Options (= indicates it is required):
           default: null
           type: str
 
+- chrony_exporter_github_token  Optional bearer token to use to
+                                 authenticate with api.github.com
+          default: ''
+          type: str
+
 - chrony_exporter_group  Name of the exporter unix group
           default: null
           type: str
