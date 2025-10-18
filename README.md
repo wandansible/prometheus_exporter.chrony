@@ -16,13 +16,15 @@ ENTRY POINT: *main* - Install and configure Chrony Exporter for Prometheus
 
 Options (= indicates it is required):
 
-- chrony_exporter_arch_map  Mapping of the possible values of ansible_architecture to the
-                             exporter package architectures
+- chrony_exporter_arch_map  Mapping of the possible values of
+                             ansible_architecture to the exporter
+                             package architectures
           default: null
           type: dict
 
-- chrony_exporter_archive_urls  Override the list of exporter archive urls for different platforms
-                                 and architectures
+- chrony_exporter_archive_urls  Override the list of exporter archive
+                                 urls for different platforms and
+                                 architectures
           default: null
           elements: str
           type: list
@@ -39,23 +41,28 @@ Options (= indicates it is required):
           default: null
           type: str
 
-- chrony_exporter_checksum_url  Override the URL for the exporter checksum file
+- chrony_exporter_checksum_url  Override the URL for the exporter
+                                 checksum file
           default: null
           type: str
 
-- chrony_exporter_checksums  Override exporter archive checksums file contents
+- chrony_exporter_checksums  Override exporter archive checksums file
+                              contents
           default: null
           type: str
 
-- chrony_exporter_clean_src_dir  Remove old downloaded archive files from exporter src directory
+- chrony_exporter_clean_src_dir  Remove old downloaded archive files
+                                  from exporter src directory
           default: true
           type: bool
 
-- chrony_exporter_configure_caddy  If true, configure caddy to add a TLS endpoint for the exporter
+- chrony_exporter_configure_caddy  If true, configure caddy to add a
+                                    TLS endpoint for the exporter
           default: false
           type: bool
 
-- chrony_exporter_description  Description for the exporter systemd service
+- chrony_exporter_description  Description for the exporter systemd
+                                service
           default: null
           type: str
 
@@ -73,24 +80,34 @@ Options (= indicates it is required):
           default: null
           type: dict
 
-- chrony_exporter_file_sd_dir  Directory, on scrape servers, for the file service discovery target
+- chrony_exporter_file_sd_dir  Directory, on scrape servers, for the
+                                file service discovery target
           default: /etc/prometheus/file_sd/chrony_exporter
           type: str
 
-- chrony_exporter_flags  List of flags to run exporter with, as string or list
+- chrony_exporter_flags  List of flags to run exporter with, as
+                          string or list
           default: null
           type: raw
 
-- chrony_exporter_github_checksum_filename  Filename for the exporter package checksums file on github
+- chrony_exporter_github_checksum_filename  Filename for the exporter
+                                             package checksums file on
+                                             github
           default: null
           type: str
 
-- chrony_exporter_github_org  Name of organisation for exporter github repository
+- chrony_exporter_github_org  Name of organisation for exporter
+                               github repository
           default: SuperQ
           type: str
 
 - chrony_exporter_github_repo  Name of exporter github repository
           default: null
+          type: str
+
+- chrony_exporter_github_token  Optional bearer token to use to
+                                 authenticate with api.github.com
+          default: ''
           type: str
 
 - chrony_exporter_group  Name of the exporter unix group
@@ -110,21 +127,25 @@ Options (= indicates it is required):
           default: true
           type: bool
 
-- chrony_exporter_labels  Labels added to exporter metrics, overrides prometheus_labels
+- chrony_exporter_labels  Labels added to exporter metrics, overrides
+                           prometheus_labels
           default: null
           type: dict
 
-- chrony_exporter_listen_addresses  List of addresses and ports to listen on
+- chrony_exporter_listen_addresses  List of addresses and ports to
+                                     listen on
           default: ['localhost:9123']
           elements: str
           type: list
 
-- chrony_exporter_log_level  Only log messages with the given severity or above
+- chrony_exporter_log_level  Only log messages with the given
+                              severity or above
           choices: [debug, info, warn, error]
           default: warn
           type: str
 
-- chrony_exporter_manage_user  If true, add exporter unix user and group
+- chrony_exporter_manage_user  If true, add exporter unix user and
+                                group
           default: true
           type: bool
 
@@ -132,11 +153,13 @@ Options (= indicates it is required):
           default: 9123
           type: int
 
-- chrony_exporter_register  If true, register the exporter with the scrape servers
+- chrony_exporter_register  If true, register the exporter with the
+                             scrape servers
           default: false
           type: bool
 
-- chrony_exporter_scrape_servers  List of servers that scrape exporter metrics from the host,
+- chrony_exporter_scrape_servers  List of servers that scrape
+                                   exporter metrics from the host,
                                    overrides prometheus_scrape_servers
           default: null
           elements: str
@@ -146,15 +169,18 @@ Options (= indicates it is required):
           default: null
           type: str
 
-- chrony_exporter_service_unit_file  Contents of the systemd unit file for the exporter
+- chrony_exporter_service_unit_file  Contents of the systemd unit
+                                      file for the exporter
           default: null
           type: str
 
-- chrony_exporter_src_dir  Directory for the downloaded exporter src archive
+- chrony_exporter_src_dir  Directory for the downloaded exporter src
+                            archive
           default: null
           type: str
 
-- chrony_exporter_strip_components  Strip NUMBER leading components from file names on extraction
+- chrony_exporter_strip_components  Strip NUMBER leading components
+                                     from file names on extraction
           default: 1
           type: int
 
@@ -166,7 +192,8 @@ Options (= indicates it is required):
           default: null
           type: str
 
-- chrony_exporter_version  Version to install (use "latest" for the latest version)
+- chrony_exporter_version  Version to install (use "latest" for the
+                            latest version)
           default: latest
           type: str
 ```
