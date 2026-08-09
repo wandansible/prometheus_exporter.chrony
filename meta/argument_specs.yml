@@ -121,7 +121,7 @@ argument_specs:
         type: str
         default: ""
 
-      chrony_exporter_github_checksum_filename:
+      chrony_exporter_checksum_filename:
         description: Filename for the exporter package checksums file on github
         type: str
 
